@@ -1,0 +1,157 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem 6}}
+\rhead{\course \\29th July 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{Test Cases}
+
+\textbf{Test Case 1}
+
+Function --- Power.powr(double, int)
+
+Input--- Power.powr(5.0, 3)
+
+Expected --- 125.0
+
+Result --- Pass
+
+The above test case is tied to \textbf{FR3} \newline
+
+\textbf{Test Case 2}
+
+Function --- Power.nat\_log(int)
+
+Input--- Power.powr(20.0)
+
+Expected --- 2.995
+
+Result --- Pass
+
+The above test case is tied to \textbf{FR4} \newline
+
+\textbf{Test Case 3}
+
+Function --- Power.powr(double, double, double)
+
+Input--- Power.powr(16.0,0.75,0.001)
+
+Expected --- 8.0
+
+Result --- Pass
+
+The above test case is tied to \textbf{FR3} \newline
+
+\textbf{Test Case 4}
+
+Function --- Power.epowrx(double)
+
+Input--- Power.epowrx(3.0)
+
+Expected --- 20.085
+
+Result --- Pass
+
+The above test case is tied to \textbf{FR3} \newline
+
+
+\textbf{Test Case 5}
+
+Function --- BetaFuncStirling.CompBetaS(double , double)
+
+Input--- BetaFuncStirling.CompBetaS(3.0,4.0)
+
+Expected --- 0.016
+
+Result --- Pass , with a very low delta
+
+The above test case is tied to \textbf{FA1, FR1 , FR2}  \newline
+
+\textbf{Test Case 6}
+
+Function --- BetaFuncLnGamma.lngamma(double)
+
+Input--- BetaFuncLnGamma.lngamma(3.5)
+
+Expected --- 1.2009
+
+Result --- Pass , super accurate
+
+The above test case is tied to \textbf{FA1} \newline
+
+\textbf{Test Case 7}
+
+Function --- BetaFuncLnGamma.beta(double,double)
+
+Input--- BetaFuncLnGamma.beta(3.0,4.0)
+
+Expected --- 0.0168
+
+Result --- Pass , super accurate 
+
+The above test case is tied to \textbf{FA1 , FR1 , FR2} \newline
+
+\textbf{Test Case 8}
+
+Function --- BetaFuncLnGamma.beta(double,double)
+
+Input--- BetaFuncLnGamma.beta(-3.0,-4.0)
+
+Expected --- -\infty
+
+Result --- Fail as expected, because it violates FA1 and FA2 , but commented out in the JUnit code
+
+The above test case is tied to \textbf{FA1,FA2}
+
+
+
+
+\end{document}

@@ -1,0 +1,161 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem 4}}
+\rhead{\course \\29th July 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{GIT Repository Links}
+
+\textbf{GIT Hub personal page}
+
+\url{https://github.com/robinkarlose}
+
+\textbf{GitHub repository for Project (Exact location may change)}
+
+\url{https://github.com/robinkarlose/SOEN6011Project}
+
+
+\section*{Introductory Notes about the Java Implementation of the Beta Function}
+
+For input , I have used a simple textual user interface.
+
+
+I have included some very basic but helpful error messages, with possible solution(s) to resolve them.
+
+
+
+\section*{Debugger}
+
+Since I carried out the implementation of the function from scratch , I have used an IDE - the IntelliJ IDE. 
+
+IntelliJ is a fantastic IDE with a very good debugger and other solid features.
+
+It has the following features:-
+\begin{itemize}
+\item{Breakpoints and watchpoints for Java}
+\item{Support for multiple simultaneous debugging sessions}
+\item{Frames , variables and watches views in the debugger User Interface}
+\item{Runtime Evaluation of expressions , etc}
+\end{itemize}
+
+\textbf{Advantages}
+
+\begin{itemize}
+\item{Easy to evaluate individual terms of series and check for accuracy and see whats going wrong and where the approximations are slowly causing the result to become inaccurate}
+\item{Evaluation of mathematical expressions are easier}
+\item{Extremely customized break point properties:conditions , pass count , and so on }
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\item{Steep Learning curve for first time users}
+\item{While the UI for the debugger is excellent brimming with features , it can get a little overwhelming and inefficient to use}
+\end{itemize}
+
+
+
+\section*{Qualities of the Program}
+
+\textbf{Correctness of code}
+
+I computed the Beta function using 2 methods - 
+
+1.Stirling's Approximation of the Gamma function and 
+
+2.Calculating the natural log of the Gamma function the Lanczos formula for the Stieltjes function
+
+The Beta Function can be extremely inaccurate if you use an approximation of the power function for real numbers (as I needed to use in method 1). So method 1 is producing fairly inaccurate results.
+Method 2 is far more accurate and is producing a near correct calculation of the Beta function
+
+\textbf{Efficiency of code}
+
+The code is relatively efficient as most of my methods use single loops which leads to lower values of time complexity
+
+\textbf{Maintainability of code}
+
+I divided the implementation of the code into multiple classes and methods and it is easy to organize and build upon , hence highly maintainable
+
+\textbf{Robustness of code}
+
+I tried to make the code more robust by keeping provision for error messages with some tips on how to solve them
+
+\textbf{Usability of code}
+
+My code is easy to use with easy to execute and understand for the user with a simple textual user interface
+
+
+\section*{Tool Used - Checkstyle}
+
+Checkstyle is a solid platform independent tool to check the source code.
+
+It has some of the following features:-
+\begin{itemize}
+\item{Naming conventions of attributes and methods}
+\item{The use of imports, and scope modifiers}
+\item{The number of function parameters , etc}
+\end{itemize}
+
+\textbf{Advantages}
+
+\begin{itemize}
+\item{Checkstlye is portable across IDEs - this is one of its biggest strengths as it is the same whether you use Eclipse or IntelliJ}
+\item{Checkstyle has better external tooling. It's much easier to integrate checkstyle with your external tools since it was really designed as a standalone framework}
+\item{It grants you the ability to create your own rules and standards }
+\end{itemize}
+
+\textbf{Disadvantages}
+
+\begin{itemize}
+\item{It can be a pain to install and the plugin itself can cause instability in the original IDE installation}
+\item{In some rare cases, forces some unnecessary conventions which don't affect the code much and a lot of time is wasted in re-organizing the code perfectly again}
+\end{itemize}
+\end{document}
