@@ -1,0 +1,92 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem 2}}
+\rhead{\course \\18th July 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{Functional Requirements}
+
+\textbf{Identifier - FR1}
+
+\textbf{FR1} --- The Beta Function can provide an output if it has an input from a domain comprising of positive Real Numbers only.
+
+\textbf{Identifier - FR2}
+
+\textbf{FR2} --- The Beta Function , can only provide an output if its parameters , X and Y are both positive numbers i.e. Real Number X $>$ 0 and Real Number Y $>$ 0.
+
+\textbf{Identifier - FR3}
+
+\textbf{FR3} --- To compute the value of the Beta Function , a subordinate function needs to be used to calculate the value of A raised to the power B. In other words we need to define a power function to calculate $A^B$ .
+
+\textbf{Identifier - FR4}
+
+\textbf{FR4} ---To computer the value of the Beta Function for any Real number, we need to be able to compute the Definite Integral as defined in the mathematical realm of Calculus. \newline
+
+
+\textbf{Functional Assumption}
+
+\textbf{FA1} --- To compute the value of the Beta Function , we can estimate the value of the Definite Integral using Numerical Methods.
+
+\section*{NON FUNCTIONAL REQUIREMENTS}
+% Rest of the work...
+\textbf{Identifier - NFR1}
+
+\textbf{NFR1} --- To accurately compute the value of Beta Function for larger input values of X and Y , we need the ability to store very large decimal values.
+
+\textbf{Identifier - NFR2}
+
+\textbf{NFR2} --- The method used to calculate the Beta Function , should be scalable for different input values and different Hardware Requirements.
+
+\textbf{Identifier - NFR3}
+
+\textbf{FR3} --- The method used to calculate the Beta Function , should be optimized for performance so that it efficiently calculates the integral for large input values of  X and Y.
+
+\end{document}

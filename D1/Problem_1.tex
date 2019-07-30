@@ -1,0 +1,105 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem \hwnumber}}
+\rhead{\course \\15th July 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{1.Function Definition}
+
+The Beta function is a special function in Mathematics, which is defined by the following formula
+
+$B(x,y)=\int_{0}^{1} t^{x-1} {(1-t)}^{y-1} dt$
+
+The domain of the function is for -- Re x $>$ 0, Re y $>$ 0. (Positive Real numbers x and y)
+
+The co-domain of the function is also the same – Re x $>$ 0, Re y $>$ 0. (Positive Real numbers x and y)
+
+It is also known as the Euler integral of the first kind. The Beta function is important in Mathematics , calculus and analysis due to its relationship with the gamma function and the factorial function. Interestingly a lot of complex integrals can be derived and reduced to simpler expressions involving the Beta function
+
+
+\section*{2. Characteristics of the Beta Function}
+% Rest of the work...
+
+\begin{itemize}
+    \item
+   $B(m,n)=B(n,m)$
+  \item
+$B(m,n)=2\int_0^{\frac{\pi}{2}}\sin^{2m-1}\Theta\cos^{2n-1}\Theta d\Theta$
+
+  
+
+    \item $B(m,n)=\int_{0}^{\infty} {\frac{x^{m-1}}{{(1+x)}^{m+n}}}  dx$  
+    \item $B(m,n)=\int_{0}^{1} {\frac{x^{m-1}+x^{n-1}}{{(1+x)}^{m+n}}}  dx$ 
+\end{itemize} 
+   %% \begin{figure}[!h]
+    %%\centering
+    %%\includegraphics[width=0.3\linewidth]{heidi.jpg}
+    %%\caption{Heidi attacked by a string.}
+    %%\end{figure}
+    
+    
+    It is also related to the Gamma Function with the following relationship
+    
+    
+    $B(p,q)={\frac{\Gamma p \Gamma q}{ \Gamma (p+q)}} $
+    
+Also it possesses the Recurrence Relationship property
+
+
+$B(x+1,y)={B(x,y) \frac{x}{x+y}} $
+
+
+Relationship with factorial method
+
+$B(x,y)={\frac{(x-1)!(y-1)!}{(x+y-1)!}} $
+
+
+\end{document}
