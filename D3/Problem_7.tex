@@ -1,0 +1,92 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{C}{
+    language        = C,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem 7}}
+\rhead{\course \\2nd August 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{Testing and Test Review of F10 - $\sigma$ }
+
+I decided to test the code with the following situations
+
+\begin{itemize}
+\item{My own test cases , based on my knowledge of the Standard Deviation Function}
+\item{Existing Test cases in the calculatorTest.java file}
+\item{Replicated all test cases for both categories of Standard Deviation - Sample and Population}
+\end{itemize}
+
+
+The testing environment was my preferred IDE for Java - IntelliJ.
+
+I executed the program and was presented with a GUI where I manually entered my own test cases.
+
+Also I ran the calculatorTest.java file to see if all test cases presented by the author passed.
+
+
+\section*{Testing Observations}
+% Rest of the work...
+The following were my observations during the testing process:- 
+
+\begin{itemize}
+\item{The test cases were comprehensive, extremely well written and covered all possible scenarios}
+\item{The GUI provided an appropriate error message when I tried to enter anything other than numbers - like characters , strings , special characters etc}
+\item{For cases without commas, it was considered one whole number and the error message was different - "Please enter numbers separated by commas"}
+\item{Negative numbers were also adequately dealt with}
+\item{I did not even notice a small difference in SD when I calculated the SD with the positive equivalents of the same numbers . For instance I got the exact same result when I calculated the SD for "-200,-4.5,-172.89" and the SD for "200,4.5,172.89" }
+\item{The calculation for SD was extremely accurate,correct to many decimal places}
+\item{Equal support and attention given to both categories of SD - sample and population}
+\item{Overall - good robust testing with testing principles and all variety of test cases kept in mind}
+\item{Curious to see how this function would perform in integration testing along with other functions of the calculator}
+\end{itemize}
+
+
+
+
+\end{document}

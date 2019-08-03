@@ -1,0 +1,129 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{C}{
+    language        = C,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{SOEN 6011}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Robin Karlose}           % <-- NetID of person #1
+\newcommand\NetIDb{40089313}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Problem 5}}
+\rhead{\course \\2nd August 2019}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{Manual Code Review of F9 - $x^y$ }
+
+I decided to go ahead with a manual code review of my team mates function -   $x^y$ . 
+
+
+There are a couple of reasons why code review is important,some of which include
+\begin{itemize}
+\item{Knowledge sharing across members of the team and with members of other teams}
+\item{Code legibility}
+\item{Consistency of code in large projects}
+\item{Correction of accidental errors in code}
+\end{itemize}
+
+
+The approach I took in reviewing the code was I manually evaluated the code in basic details against certain guidelines which I mention in the following points 
+
+\begin{itemize}
+\item{\textbf{Purpose} - Whether the code achieve the purpose it was originally designed for and whether it meets all the requirements}
+\item{\textbf{Implementation} - How the code was actually implemented and transformed into something which generates output}
+\item{\textbf{Legibility and Style} - Whether it followed best practices and certain standard coding styles and whether the code was legible to other users/readers or not }
+\item{\textbf{Maintainability} - How maintainable the test code is especially with future functional changes/and or scaling}
+\end{itemize}
+
+
+\section*{Discussion and actual code review}
+% Rest of the work...
+The following section contains the discussion and actual code review (with some basic details) against the four guidelines discussed in the above 4 points \newline
+
+\textbf{PURPOSE}
+
+\begin{itemize}
+\item{The code achieves the authors purpose to some extent by calculating integer powers of numbers , but it cannot calculate $x^y$ for real number values of $y$}
+\item{To be fair though , the limitation that it cannot calculate $x^y$ for real number values of $y$ is mentioned in the authors functional requirement documents}
+\end{itemize}
+
+\textbf{IMPLEMENTATION}
+
+\begin{itemize}
+\item{The code is neatly broken down into 3 classes and 1 test class - the 3 actual classes being APowerB.java , Calculator.java , ICalculator.java  (which is actually an interface) and 1 testing class TestCalculator.java}
+\item{There is good use of abstraction especially with the class Calculator.java implementing the interface ICalculator.java}
+\item{Code does not make use of any libraries and is fairly dependency free}
+\item{If I were to re-implement it , I would go into much more logical detail in the functions and try and implement $x^y$ where $y$ is a real number using some approximation technique}
+\end{itemize}
+
+
+\textbf{LEGIBILITY AND STYLE}
+
+\begin{itemize}
+\item{Code is implemented in a simple but extremely lucid manner}
+\item{High code readability with presence of comments everywhere}
+\item{Code has presence of JavaDoc}
+\end{itemize}
+
+\textbf{MAINTAINABILITY}
+
+\begin{itemize}
+\item{Presence of a test class called TestCalculator.java}
+\item{The function can be used in a scalable way in a calculator}
+\item{Proper Integration tests need to be carried out if the function is used in a calculator along with other calculators}
+\item{Change Requests (CRs) should not break this existing code}
+\item{More detailed comments would help when integrating with other functions of the calculator}
+\item{Room for external documentation like ReadMe , User Manual etc}
+\end{itemize}
+
+
+\section*{References}
+
+The following article from www.medium.com greatly helped me and inspired me in my code review.
+The link is below:-
+
+\url{https://medium.com/palantir/code-review-best-practices-19e02780015f}
+
+
+
+\end{document}
